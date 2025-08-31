@@ -1,0 +1,330 @@
+/* Developer : Mahmudul Abedin */
+/* Instructor : Faisal Ahmed Shourab */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "DM Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .searchbar input::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+/* Home Section */
+
+#home {
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 1084px;
+  padding: 0;
+}
+
+/* Header */
+
+nav.flex.container {
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+nav .logo {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+  text-transform: capitalize;
+
+  a {
+    color: #fff;
+  }
+}
+
+nav .menu {
+  justify-content: center;
+  align-items: center;
+
+  li {
+    padding: 0 29px;
+  }
+
+  a {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .fa-chevron-down {
+    padding: 0 0 0 12px;
+    font-size: 14px;
+  }
+}
+
+nav .submenu {
+  width: 250px;
+  position: absolute;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 10px 10px rgb(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(25px);
+  border-radius: 18px;
+  margin: 100px 0 0 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease-in-out;
+
+  li {
+    padding: 0;
+  }
+
+  li:first-child {
+    a {
+      border: none;
+    }
+  }
+
+  a {
+    color: white;
+    display: block;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    padding: 12px 16px;
+    text-align: left;
+    border-top: 1px solid black;
+    transition: 0.5s;
+  }
+
+  a:hover {
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 30px;
+  }
+}
+
+.menu li:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  margin-top: 15px;
+}
+
+.cart {
+
+  a {
+    position: relative;
+    color: #fff;
+  }
+
+  i {
+    font-size: 22px;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
+  #count {
+    background-color: #e58411;
+    border-radius: 100%;
+    padding: 0 5px;
+    position: absolute;
+    top: -3px;
+    right: -5px;
+  }
+}
+
+/* Home Section */
+
+#home .heading {
+  text-align: center;
+  margin-top: 75px;
+
+  h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 130%;
+    letter-spacing: -0.01em;
+    text-transform: capitalize;
+    text-align: center;
+    color: #fff;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160%;
+    text-align: center;
+    color: #fff;
+    opacity: 0.8;
+  }
+}
+
+.searchbar {
+  margin: 45px auto;
+  align-items: center;
+  position: relative;
+  border: 0.86px solid rgba(255, 255, 255, 0.6);
+  border-radius: 42px;
+  padding: 8px 8px 8px 20px;
+  width: 344px;
+  height: 56px;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.15);
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    caret-color: white;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #fff;
+    opacity: 0.8;
+    text-align: left;
+    background-color: transparent;
+    width: 250px;
+    height: 35px;
+  }
+
+  button {
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: 10px;
+    border: none;
+    background: #e58411;
+    border-radius: 24px;
+    padding: 11px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+
+    svg {
+      stroke-width: 2px;
+      stroke: #fff;
+
+    }
+  }
+}
+
+.searchbar input::placeholder {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  opacity: 0.8;
+  text-align: left;
+}
+
+/* FAQ Section */
+
+.FAQ.flex.container {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.FAQ .ques {
+  h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 42px;
+    color: #1e1e1e;
+  }
+}
+
+.FAQ .heading {
+  text-align: left;
+
+  h1 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 24px;
+    color: #1e1e1e;
+  }
+
+  p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 185%;
+    color: #1e1e1e;
+    opacity: 0.8;
+    padding: 14px 0;
+  }
+
+}
+
+.info-btn {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 185%;
+  color: #e58411;
+}
+
+.info-btn:hover {
+  background-color: #e58411;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Copyright © Mahmudul Abedin
+   All rights reserved. */
