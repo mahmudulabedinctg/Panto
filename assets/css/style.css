@@ -147,7 +147,7 @@ nav .submenu {
 .menu li:hover .submenu {
   opacity: 1;
   visibility: visible;
-  margin-top: 15px;
+  margin-top: 6px;
 }
 
 .cart {
